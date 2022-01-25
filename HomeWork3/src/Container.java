@@ -1,14 +1,14 @@
 import com.sun.xml.internal.fastinfoset.util.StringArray;
 
-public class Container<Type1> {
-  Type1 arr[];
+public class Container<T> {
+  T arr[];
   int counter = 0;
 
-  public Container(Type1[] arr) {
+  public Container(T[] arr) {
       this.arr = arr;
   }
 
-  public void add(Type1 obj) {
+  public void add(T obj) {
       if ( counter < 5) {
           arr[counter] = obj;
           counter++;
@@ -27,18 +27,18 @@ public class Container<Type1> {
   }
 
   public void change(){
-      Type1 c = arr[4];
+      T c = arr[4];
       arr[4] = arr[1];
       arr[1] = c;
       for (int i = 0; i < arr.length; i++) {
       }
   }
 
-  public Type1[] getArr() {
+  public T[] getArr() {
       return arr;
   }
 
-  public void setArr(Type1[] arr) {
+  public void setArr(T[] arr) {
       this.arr = arr;
   }
 
