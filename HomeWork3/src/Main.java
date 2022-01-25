@@ -31,8 +31,8 @@ public class Main {
 //        Apple[] apple = new Apple[5];
         Orange[] orange = new Orange[2];
 
-        Box<Apple> appleBox = new Box<Apple>(apple);
-        Box<Orange> orangeBox = new Box<Orange>(orange);
+        Box<Apple> appleBox = new Box<>(apple);
+        Box<Orange> orangeBox = new Box<>(orange);
 
         appleBox.add(new Apple());
         appleBox.add(new Apple());
