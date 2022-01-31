@@ -38,10 +38,10 @@ public class Main {
         // задача 2.
         PhoneBook phoneBook = new PhoneBook();
 
-        phoneBook.add("Ivanov",89995553535L);
-        phoneBook.add("Rogers",89559995959L);
-        phoneBook.add("Ivanov", 89333335353L);
-        phoneBook.add("Petrov", 89999555555L);
+        phoneBook.add("Ivanov","89995553535");
+        phoneBook.add("Rogers","89559995959");
+        phoneBook.add("Ivanov", "89333335353");
+        phoneBook.add("Petrov", "89999555555");
 
         System.out.println(phoneBook.get("Ivanov"));
 

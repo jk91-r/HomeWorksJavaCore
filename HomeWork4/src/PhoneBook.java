@@ -2,37 +2,23 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PhoneBook {
-    private HashMap<String, ArrayList<Long>> users;
+    private HashMap<String, ArrayList<String>> users = new HashMap<>();
+    private ArrayList<String> list;
 
-    public PhoneBook() {
-        this.users = new HashMap<String, ArrayList<Long>>();
-    }
+    public void add(String lastName, String phoneNumber) {
 
-    public void add(String s, Long l) {
-        ArrayList<Long> num = new ArrayList<Long>();
-
-        if (this.users.containsKey(s)){
-            num = this.users.get(s);
-            num.add(l);
-            this.users.put(s, num);
-        }
-        else {
-            num.add(l);
-            this.users.put(s, num);
+        if (users.containsKey(lastName)) {
+            list = users.get(lastName);
+            list.add(phoneNumber);
+            users.put(lastName, list);
+        } else {
+            list = new ArrayList<>();
+            list.add(phoneNumber);
+            users.put(lastName, list);
         }
     }
 
-    public String get(String s){
-        String res = "";
-
-        if (this.users.containsKey(s)) {
-            res = "Телефон клиента " + s + ": " +
-                    this.users.get(s).toString()
-                            .replace("[","")
-                            .replace("]", "")
-                            .replace(",", "")
-                            .trim();
-        }
-        return res;
+    public ArrayList<String> get(String lastname) {
+        return users.get(lastname) ;
     }
 }
